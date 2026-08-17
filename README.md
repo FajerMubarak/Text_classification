@@ -6,7 +6,7 @@ This project is an interactive web application designed to analyze Arabic restau
 
 ## 🚀 Live Application
 
-Access the live app here: 👉 https://textclassification1.streamlit.app/
+Access the live app here: 👉 (https://textclassification-s.streamlit.app/)
 
 ---
 
