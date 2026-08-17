@@ -1,26 +1,33 @@
 # 🍔 Arabic Restaurant Reviews Analysis System
 
-An end-to-end Natural Language Processing (NLP) system designed to analyze and classify Arabic restaurant reviews. The application utilizes state-of-the-art Hugging Face Transformer models for both fine-grained sentiment analysis and zero-shot aspect classification, accessible via an interactive Streamlit web dashboard.
+This project is an interactive web application designed to analyze Arabic restaurant reviews. It leverages advanced Natural Language Processing (NLP) models to evaluate customer sentiment and categorize feedback into key operational areas.
+
+---
+
+## 🚀 Live Application
+
+Access the live app here: 👉 https://textclassification1.streamlit.app/
+
+---
+
+## 📝 Project Overview
+
+This application utilizes state-of-the-art Hugging Face Transformer models to evaluate Arabic restaurant feedback. It performs sentiment analysis to capture customer satisfaction and applies zero-shot categorization to organize reviews into operational domains like food quality, service, and pricing.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** Streamlit
+* **AI/ML:** Hugging Face Transformers (`CAMeLBERT`, `mDeBERTa-v3`), PyTorch
+* **Data Processing:** Pandas, Scikit-learn, Matplotlib, Seaborn
+* **Language:** Python 3.11+
 
 ---
 
 ## 📌 Features
 
-* **Task A: Sentiment Analysis:** Classifies user review sentiment into **Positive**, **Negative**, or **Neutral** categories using a specialized Arabic BERT backbone (`CAMeLBERT-mix`).
-* **Task B: Zero-Shot Aspect Classification:** Automatically categorizes reviews into predefined operational dimensions (**Food Quality**, **Service & Staff**, **Price**, **Location & Ambience**, **Waiting Time**) using `mDeBERTa-v3`.
-* **Error Analysis & Performance Metrics:** Evaluates model outputs using confusion matrices, confidence score distributions, and classification reports.
-* **Interactive Streamlit App:** Allows users to test single review inputs or select pre-loaded reviews from the dataset with real-time predictions and custom JSON metadata outputs.
-
----
-
-## 📂 Repository Structure
-
-```text
-├── data/
-│   └── restaurant_reviews.csv      # Dataset containing raw Arabic reviews & ground truth labels
-├── notebooks/
-│   └── review_analysis.ipynb      # Jupyter notebook for EDA, model evaluation, and error analysis
-├── app.py                         # Streamlit interactive application
-├── requirements.txt               # Dependencies required for deployment
-├── .gitignore                     # Git ignore file for environment & cache files
-└── README.md                      # Project documentation
+* **Sentiment Analysis:** Evaluates Arabic review sentiment into **Positive**, **Negative**, or **Neutral** categories using `CAMeL-Lab/bert-base-arabic-camelbert-mix-sentiment`.
+* **Aspect Categorization:** Groups reviews into five operational dimensions (**Food Quality**, **Service & Staff**, **Price**, **Location & Ambience**, **Waiting Time**) using `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`.
+* **Error Analysis & Performance:** Examines output patterns on dialectal text and multi-topic reviews using confusion matrix heatmaps and confidence score distributions.
+* **Interactive Dashboard:** Streamlit interface allowing users to test single review inputs or select pre-loaded samples from `restaurant_reviews.csv` with real-time predictions and JSON metadata logs.
